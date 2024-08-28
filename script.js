@@ -1,5 +1,5 @@
 const weatherKey = "53YJGTPSKPDQKYRBRWALBKP6Y";
-
+let weatherData;
 async function getWeatherData(location) {
   try {
     const response = await fetch(
@@ -11,5 +11,5 @@ async function getWeatherData(location) {
   }
 }
 getWeatherData("Komotini").then((data) => {
-  console.log(data.days[0]);
+  weatherData = data;
 });
