@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header,
+footer {
+  height: 150px;
+  background-color: rgb(79, 130, 181);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  border: 2px solid black;
+}
+.dayContainer {
+  padding-top: 1em;
+  gap: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.hourCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  padding: 0.5em;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(21, 106, 203) 100%
+  );
+}

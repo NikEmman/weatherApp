@@ -17,24 +17,53 @@
       </form>
     </header>
     <main>
-      <section>
-        <div class="daysContainer">
-          <div class="dayCard">
-            <div class="date"></div>
-            <div class="tempmax"></div>
-            <div class="tempmin"></div>
-            <div class="humidity"></div>
-            <div class="sunrise"></div>
-            <div class="sunset"></div>
-            <div class="icon"></div>
-            <!-- hours -->
-            <!-- datetime -->
-            <!-- icon -->
-            <!-- temp -->
-            <!-- feelslike -->
+      <div class="container">
+        <div class="card">
+          <div class="date">29 Aug</div>
+          <div class="icon">
+            <img src="assets/clear-day.png" alt="weather icon" />
           </div>
+          <div class="tempmax">Max temp: <span>36 C</span></div>
+          <div class="tempmin">Min temp: <span>25 C</span></div>
+          <div class="humidity">Humidity: 45%</div>
+          <div class="sunrise">Sunrise: 06.55</div>
+          <div class="sunset">Sunset: 20.00</div>
         </div>
-      </section>
+        <div class="card">
+          <div class="date">29 Aug</div>
+          <div class="icon">
+            <img src="assets/clear-day.png" alt="weather icon" />
+          </div>
+          <div class="tempmax">Max temp: <span>36 C</span></div>
+          <div class="tempmin">Min temp: <span>25 C</span></div>
+          <div class="humidity">Humidity: 45%</div>
+          <div class="sunrise">Sunrise: 06.55</div>
+          <div class="sunset">Sunset: 20.00</div>
+        </div>
+      </div>
+
+      <fieldset class="dayContainer">
+        <legend>Hourly analysis</legend>
+        <div class="hourCard">
+          <div class="hour">01.00</div>
+          <div class="hourIcon">
+            <img src="assets/clear-night.png" alt="weather icon" />
+          </div>
+          <div class="hourTemp">Temp: <span>28 C</span></div>
+          <div class="feelslike">Feels like: <span>26 C</span></div>
+        </div>
+        <div class="hourCard">
+          <div class="hour">01.00</div>
+          <div class="hourIcon">
+            <img src="assets/clear-night.png" alt="weather icon" />
+          </div>
+          <div class="hourTemp">Temp: <span>28 C</span></div>
+          <div class="feelslike">Feels like: <span>26 C</span></div>
+        </div>
+      </fieldset>
     </main>
+    <footer>
+      Powered by<a href="https://www.visualcrossing.com/">Visual Crossing</a>
+    </footer>
   </body>
 </html>
