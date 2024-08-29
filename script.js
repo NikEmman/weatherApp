@@ -1,3 +1,4 @@
+//API - data fetching
 const weatherKey = "53YJGTPSKPDQKYRBRWALBKP6Y";
 let weatherData;
 async function getWeatherData(location) {
@@ -13,3 +14,17 @@ async function getWeatherData(location) {
 getWeatherData("Komotini").then((data) => {
   weatherData = data;
 });
+
+//form stuff
+const form = document.querySelector("form");
+form.addEventListener("submit", populate);
+function getLocation() {
+  const location = document.getElementById("location");
+  let data = location.textContent;
+  location.textContent = "";
+  return data;
+}
+
+function populate() {
+  getWeatherData(getLocation);
+}

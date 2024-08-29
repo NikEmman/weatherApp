@@ -6,7 +6,20 @@ header,
 footer {
   height: 150px;
   background-color: rgb(79, 130, 181);
+  display: flex;
+  padding: 2em;
 }
+header {
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer {
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+
 main {
   display: flex;
   flex-direction: column;
