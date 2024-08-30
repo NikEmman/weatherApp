@@ -59,12 +59,16 @@ function createDOMDays(data) {
           <div>Sunset: ${formatHour(day.sunset)}</div>`;
     container.appendChild(card);
   });
+  const today = document.querySelector('[data-index="0"]');
+  today.click();
 }
 // populates hourly weather elements
 function createDOMHours(event) {
   const index = event.currentTarget.dataset.index;
   const dayContainer = document.querySelector(".dayContainer");
   dayContainer.innerHTML = "";
+  clearHourlyTitle();
+  updateHourlyTitle(weatherData.days[index].datetime);
   weatherData.days[index].hours.forEach((hour) => {
     const hourCard = document.createElement("div");
     hourCard.classList.add("hourCard");
@@ -79,7 +83,7 @@ function createDOMHours(event) {
           <div class="hourIcon">
             <img src="assets/${hour.icon}.png" alt="weather icon" />
           </div>
-          <div class="temp">${hour.temp}</span></div>
+          <div class="temp">${hour.temp} F</span></div>
           <div>Feels: <span class="temp">${hour.feelslike} F</span></div>
 `;
     dayContainer.appendChild(hourCard);
@@ -89,6 +93,14 @@ function determineBackgroundClass(hour, sunrise, sunset) {
   const backgroundClass = hour > sunrise && hour < sunset ? "day" : "night";
   return backgroundClass;
 }
+function updateHourlyTitle(string) {
+  const hourlyTitle = document.getElementById("hourlyTitle");
+  hourlyTitle.textContent = `Hourly analysis of ${formatDate(string)}`;
+}
+function clearHourlyTitle() {
+  const hourlyTitle = document.getElementById("hourlyTitle");
+  hourlyTitle.textContent = "";
+}
 //  error DOM display
 function createDOMOnError(message) {
   const main = document.querySelector("main");
@@ -97,6 +109,7 @@ function createDOMOnError(message) {
   const dayContainer = document.querySelector(".dayContainer");
   container.innerHTML = "";
   dayContainer.innerHTML = "";
+  clearHourlyTitle();
   error.textContent = message;
   error.className = "error";
   main.appendChild(error);
@@ -134,3 +147,26 @@ function formatDate(dateString) {
 function formatHour(hour) {
   return hour.slice(0, -3);
 }
+// Temperature toggle
+document.getElementById("toggleButton").addEventListener("click", function () {
+  const temps = document.querySelectorAll(".temp");
+  const button = this;
+
+  temps.forEach((temp) => {
+    let value = parseFloat(temp.textContent);
+    if (button.textContent === "Switch to Celsius") {
+      //  Fahrenheit to Celsius
+      value = ((value - 32) * 5) / 9;
+      temp.textContent = `${value.toFixed(1)} C`;
+    } else {
+      //  Celsius to Fahrenheit
+      value = (value * 9) / 5 + 32;
+      temp.textContent = `${value.toFixed(1)} F`;
+    }
+  });
+
+  button.textContent =
+    button.textContent === "Switch to Celsius"
+      ? "Switch to Fahrenheit"
+      : "Switch to Celsius";
+});

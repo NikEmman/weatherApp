@@ -3,22 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
+    <title>WeatherFinder</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Ze weather app</h1>
+      <h1>WEATHER FINDER APP</h1>
       <form action="/" method="get">
-        <label for="location">Enter a location</label>
-        <input type="text" name="location" id="location" />
+        <label for="location">Enter a location </label>
+        <input
+          type="text"
+          name="location"
+          id="location"
+          placeholder="Enter a city, i.e Athens"
+        />
         <input type="submit" value="Search" />
       </form>
+      <button id="toggleButton">Switch to Celsius</button>
     </header>
     <main>
       <div class="container">
-        <div class="card">
+        <!-- <div class="card">
           <div class="date">29 Aug</div>
           <div class="icon">
             <img src="assets/clear-day.png" alt="weather icon" />
@@ -28,165 +34,11 @@
           <div class="humidity">Humidity: 45%</div>
           <div class="sunrise">Sunrise: 06.55</div>
           <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
-        <div class="card">
-          <div class="date">29 Aug</div>
-          <div class="icon">
-            <img src="assets/clear-day.png" alt="weather icon" />
-          </div>
-          <div class="tempmax">Max: <span>36 C</span></div>
-          <div class="tempmin">Min: <span>25 C</span></div>
-          <div class="humidity">Humidity: 45%</div>
-          <div class="sunrise">Sunrise: 06.55</div>
-          <div class="sunset">Sunset: 20.00</div>
-        </div>
+        </div> -->
       </div>
-      <h3>Hourly analysis</h3>
+      <h3 id="hourlyTitle"></h3>
       <div class="dayContainer">
-        <div class="hourCard night">
+        <!-- <div class="hourCard night">
           <div class="hour">01.00</div>
           <div class="hourIcon">
             <img src="assets/clear-night.png" alt="weather icon" />
@@ -201,183 +53,7 @@
           </div>
           <div class="hourTemp"><span>28 C</span></div>
           <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard night">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
-        <div class="hourCard day">
-          <div class="hour">01.00</div>
-          <div class="hourIcon">
-            <img src="assets/clear-night.png" alt="weather icon" />
-          </div>
-          <div class="hourTemp"><span>28 C</span></div>
-          <div class="feelslike">Feels: <span>26 C</span></div>
-        </div>
+        </div> -->
       </div>
     </main>
     <footer>

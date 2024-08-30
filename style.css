@@ -21,23 +21,30 @@ footer {
   align-items: center;
   gap: 0.8em;
 }
-
+input {
+  padding: 0.5em;
+}
+button {
+  padding: 0.5em;
+}
 main {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  min-height: calc(100vh - 400px);
 }
 .error {
   font-size: 5em;
   font-style: italic;
   justify-self: center;
   align-self: center;
+  padding: 2em;
 }
 .container {
   padding: 1em;
   gap: 0.5em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 .card {
   display: flex;
@@ -82,4 +89,7 @@ h3 {
     rgba(9, 9, 121, 1) 35%,
     rgb(21, 106, 203) 100%
   );
+}
+a {
+  text-decoration: none;
 }
